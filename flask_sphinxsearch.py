@@ -1,4 +1,7 @@
-import sphinxsearch
+try:
+    import sphinxapi as sphinxsearch
+except ImportError:
+    import sphinxsearch
 from flask import current_app
 
 # Find the stack on which we want to store the database connection.
